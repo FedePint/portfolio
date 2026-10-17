@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Federico Pintabona — Computer Engineering Student at Politecnico di Torino specializing in High-Performance Computing (CUDA, C++), Computer Graphics (OpenGL, GLSL, Unreal Engine 5, Blender), and Software Engineering.">
+    <meta name="keywords" content="Federico Pintabona, portfolio, computer engineering, HPC, CUDA, computer graphics, OpenGL, GLSL, Unreal Engine 5, Blender, Politecnico di Torino">
+    <meta name="author" content="Federico Pintabona">
+    <meta name="theme-color" content="#0a0a0f">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Federico Pintabona — Computer Engineering | HPC & Computer Graphics">
+    <meta property="og:description" content="Portfolio of Federico Pintabona: High-Performance Computing, GPU acceleration, 3D graphics engines, and real-time environments.">
+    <meta property="og:type" content="website">
+
+    <title>Federico Pintabona — Computer Engineering | HPC & Computer Graphics</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Scroll Reading Progress Indicator -->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+    <!-- Background Ambient Aura -->
+    <div class="ambient-mesh-glow" id="ambient-glow" aria-hidden="true"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Federico Pintabona</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#repositories" class="nav-link">Repositories</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <canvas id="hero-canvas" class="hero-canvas"></canvas>
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-status-pill">
+                <span class="status-pulse-dot"></span>
+                <span class="status-text">📍 Turin, Italy • Master's Student @ Politecnico di Torino</span>
+            </div>
+
+            <p class="hero-greeting">
+                <span class="greeting-line"></span>
+                Hello, I'm
+            </p>
+            <h1 class="hero-name" id="hero-name">
+                Federico Pintabona
+            </h1>
+            <p class="hero-title">
+                <span class="title-accent">Computer Engineering Student</span>
+                <span class="title-separator">|</span>
+                <span class="title-typed" id="title-typed"></span>
+                <span class="cursor-blink">|</span>
+            </p>
+            <p class="hero-subtitle">
+                Bridging High-Performance Computing (C++, CUDA, low-level architectures) with real-time 3D Visual Computing (OpenGL, GLSL, Unreal Engine 5, Blender).
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="assets/docs/CV_Federico_Pintabona.pdf" download="CV_Federico_Pintabona.pdf" class="btn btn-outline">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>Download CV</span>
+                </a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+
+            <!-- Real-time Tech Telemetry Strip -->
+            <div class="hero-telemetry-strip" data-animate="fade-up" data-delay="1000">
+                <div class="telemetry-item">
+                    <span class="telemetry-label">HPC &amp; GPU</span>
+                    <span class="telemetry-val">CUDA / OpenMP</span>
+                </div>
+                <div class="telemetry-sep">•</div>
+                <div class="telemetry-item">
+                    <span class="telemetry-label">SHADERS &amp; API</span>
+                    <span class="telemetry-val">OpenGL 3.3 / GLSL</span>
+                </div>
+                <div class="telemetry-sep">•</div>
+                <div class="telemetry-item">
+                    <span class="telemetry-label">REAL-TIME</span>
+                    <span class="telemetry-val">Unreal Engine 5</span>
+                </div>
+                <div class="telemetry-sep">•</div>
+                <div class="telemetry-item">
+                    <span class="telemetry-label">3D ART</span>
+                    <span class="telemetry-val">Blender / Cycles</span>
+                </div>
+                <div class="telemetry-sep">•</div>
+                <div class="telemetry-item">
+                    <span class="telemetry-label">LOW-LEVEL</span>
+                    <span class="telemetry-val">ARM &amp; RISC-V</span>
+                </div>
+                <div class="telemetry-sep">•</div>
+                <div class="telemetry-item">
+                    <span class="telemetry-label">QA &amp; TESTING</span>
+                    <span class="telemetry-val">pytest / Selenium</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">
+                <span class="section-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-text" data-animate="fade-up" data-delay="100">
+                    <p>
+                        I am a <strong>Computer Engineering Master's Student</strong> at <strong>Politecnico di Torino</strong>, 
+                        with a transversal background uniting high-performance parallel computing (C++, CUDA, low-level hardware architectures) 
+                        and real-time 3D computer graphics (OpenGL, GLSL, Unreal Engine 5, Blender).
+                    </p>
+                    <p>
+                        After completing my <strong>Bachelor's Degree in Cinema and Media Engineering</strong> at Politecnico di Torino, 
+                        I pursued the <strong>Master's Degree in Computer Engineering</strong> at the same institution. This dual academic 
+                        foundation empowers me to master both the mathematical and visual aspects of 3D rendering engines and lookdev pipelines, 
+                        as well as software engineering, computer architectures, and hardware-accelerated computing on CPUs and GPUs.
+                    </p>
+                    <p>
+                        Passionate about hardware optimization, memory bandwidth, and real-time graphics pipelines, I bridge the gap between 
+                        engineering rigor and artistic vision — from writing coalesced GPU kernels and bare-metal microcontroller routines to 
+                        sculpting photorealistic environments and authoring custom shader networks.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-number" data-count="16">0</span>
+                            <span class="highlight-label">3D Cycles Renders</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">PoliTo</span>
+                            <span class="highlight-label">Dual Degree</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-animate="fade-up" data-delay="200">
+                    <div class="about-profile-card">
+                        <div class="about-image-frame about-image-frame--profile">
+                            <img src="assets/images/profile.jpg" alt="Federico Pintabona — Profile Picture" loading="lazy" class="profile-avatar-img">
+                            <div class="image-frame-border"></div>
+                            <div class="profile-badge-overlay">
+                                <a href="https://github.com/FedePint" target="_blank" rel="noopener noreferrer" class="profile-github-tag">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    <span>@FedePint</span>
+                                </a>
+                                <span class="profile-status-tag">PoliTo • Turin, IT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">
+                <span class="section-number">02.</span> Academic Journey
+            </h2>
+            <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+                Dual academic foundation at Politecnico di Torino bridging low-level computer engineering and high-performance computing with digital media and 3D visual computing.
+            </p>
+            <div class="education-grid">
+                <!-- Master's Degree -->
+                <div class="education-card education-card--master" data-animate="fade-up" data-delay="150">
+                    <div class="education-card-badge">Current • In Progress</div>
+                    <div class="education-card-header">
+                        <div class="education-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="education-institution">Politecnico di Torino</span>
+                            <h3 class="education-degree">Master's Degree in Computer Engineering</h3>
+                            <span class="education-degree-it">Laurea Magistrale in Ingegneria Informatica</span>
+                        </div>
+                    </div>
+                    <p class="education-desc">
+                        Advanced specialization in High-Performance Computing (HPC), GPU acceleration using NVIDIA CUDA, CPU parallelism with OpenMP, computer architecture analysis (ARM, RISC-V), hardware optimization, software engineering methodologies, and automated testing frameworks.
+                    </p>
+                    <div class="education-tags">
+                        <span class="tag">High-Performance Computing</span>
+                        <span class="tag">NVIDIA CUDA</span>
+                        <span class="tag">OpenMP Multi-Threading</span>
+                        <span class="tag">RISC-V &amp; ARM Architectures</span>
+                        <span class="tag">Pipeline Hazard Mitigation</span>
+                        <span class="tag">pytest &amp; Selenium QA</span>
+                    </div>
+                </div>
+
+                <!-- Bachelor's Degree -->
+                <div class="education-card education-card--bachelor" data-animate="fade-up" data-delay="250">
+                    <div class="education-card-badge education-card-badge--completed">Completed Degree</div>
+                    <div class="education-card-header">
+                        <div class="education-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="education-institution">Politecnico di Torino</span>
+                            <h3 class="education-degree">Bachelor's Degree in Cinema and Media Engineering</h3>
+                            <span class="education-degree-it">Laurea Triennale in Ingegneria del Cinema e dei Mezzi di Comunicazione</span>
+                        </div>
+                    </div>
+                    <p class="education-desc">
+                        Deep foundation in computer graphics, real-time rendering pipelines, 3D modeling and animation, digital media technologies, lighting design, and virtual production. Formed the mathematical and artistic understanding of ray tracing, photon mapping, and asset pipelines.
+                    </p>
+                    <div class="education-tags">
+                        <span class="tag">Computer Graphics</span>
+                        <span class="tag">Rendering Pipelines</span>
+                        <span class="tag">3D Modeling (Blender)</span>
+                        <span class="tag">Virtual Production</span>
+                        <span class="tag">Digital Media Technologies</span>
+                        <span class="tag">Lighting &amp; Shading</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">
+                <span class="section-number">03.</span> Skills &amp; Expertise
+            </h2>
+            <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+                Synergistic engineering and artistic capabilities: from low-level GPU pipelines and parallel computing to 3D modeling and automated software quality assurance.
+            </p>
+            <div class="skills-grid">
+                <div class="skill-card skill-card--blender" data-animate="fade-up" data-delay="0">
+                    <div class="skill-card-header">
+                        <div class="skill-icon skill-icon--blender">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <span class="skill-badge skill-badge--blender">3D LookDev</span>
+                    </div>
+                    <h3 class="skill-name">3D Modeling & Assets</h3>
+                    <p class="skill-desc">Polygonal and hard-surface 3D modeling, modular architectural environments, UV unwrapping, PBR lookdev texturing, and photorealistic Cycles rendering.</p>
+                    <div class="skill-meter">
+                        <div class="meter-bar"><span class="meter-fill meter-fill--blender" style="width: 95%;"></span></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Blender</span>
+                        <span class="tag">Cycles Engine</span>
+                        <span class="tag">PBR Texturing</span>
+                        <span class="tag">Hard Surface</span>
+                    </div>
+                </div>
+
+                <div class="skill-card skill-card--unreal" data-animate="fade-up" data-delay="100">
+                    <div class="skill-card-header">
+                        <div class="skill-icon skill-icon--unreal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                        <span class="skill-badge skill-badge--unreal">Real-Time AAA</span>
+                    </div>
+                    <h3 class="skill-name">Unreal Engine 5</h3>
+                    <p class="skill-desc">Cinematic real-time environments, Lumen dynamic global illumination, Nanite virtualized geometry, Blueprints, Sequencer, and MetaHuman digital human framework.</p>
+                    <div class="skill-meter">
+                        <div class="meter-bar"><span class="meter-fill meter-fill--unreal" style="width: 92%;"></span></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">UE5</span>
+                        <span class="tag">Lumen GI</span>
+                        <span class="tag">Nanite</span>
+                        <span class="tag">MetaHuman</span>
+                        <span class="tag">Blueprints</span>
+                    </div>
+                </div>
+
+                <div class="skill-card skill-card--opengl" data-animate="fade-up" data-delay="200">
+                    <div class="skill-card-header">
+                        <div class="skill-icon skill-icon--opengl">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <span class="skill-badge skill-badge--opengl">Graphics API</span>
+                    </div>
+                    <h3 class="skill-name">Computer Graphics & Shaders</h3>
+                    <p class="skill-desc">Graphics pipeline programming with C++ and modern OpenGL 3.3, custom GLSL/HLSL shaders, Phong & PBR lighting models, mouse-to-world raycasting, and 3D spatial audio.</p>
+                    <div class="skill-meter">
+                        <div class="meter-bar"><span class="meter-fill meter-fill--opengl" style="width: 90%;"></span></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">OpenGL 3.3</span>
+                        <span class="tag">GLSL Shaders</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Raycasting</span>
+                        <span class="tag">Pipeline</span>
+                    </div>
+                </div>
+
+                <div class="skill-card skill-card--cuda" data-animate="fade-up" data-delay="300">
+                    <div class="skill-card-header">
+                        <div class="skill-icon skill-icon--cuda">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                        </div>
+                        <span class="skill-badge skill-badge--cuda">HPC Acceleration</span>
+                    </div>
+                    <h3 class="skill-name">Parallel Programming & HPC</h3>
+                    <p class="skill-desc">High-performance GPU computing with NVIDIA CUDA, memory coalescing, shared memory optimization, multi-core architectures, and scalable GNN inference engines.</p>
+                    <div class="skill-meter">
+                        <div class="meter-bar"><span class="meter-fill meter-fill--cuda" style="width: 88%;"></span></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">NVIDIA CUDA</span>
+                        <span class="tag">C++ Multi-Core</span>
+                        <span class="tag">OpenMP</span>
+                        <span class="tag">GPU Kernels</span>
+                        <span class="tag">Bandwidth Opt</span>
+                    </div>
+                </div>
+
+                <div class="skill-card skill-card--embedded" data-animate="fade-up" data-delay="400">
+                    <div class="skill-card-header">
+                        <div class="skill-icon skill-icon--embedded">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                        </div>
+                        <span class="skill-badge skill-badge--embedded">Low-Level Systems</span>
+                    </div>
+                    <h3 class="skill-name">Computer Architecture &amp; ARM</h3>
+                    <p class="skill-desc">Hardware-level pipeline optimization, instruction scheduling for Instruction-Level Parallelism (ILP), mitigation of data/control hazards, and bare-metal C on ARM Cortex-M3.</p>
+                    <div class="skill-meter">
+                        <div class="meter-bar"><span class="meter-fill meter-fill--embedded" style="width: 86%;"></span></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">ARM Cortex-M3</span>
+                        <span class="tag">RISC-V Assembly</span>
+                        <span class="tag">Bare-Metal C</span>
+                        <span class="tag">ILP Scheduling</span>
+                        <span class="tag">Hardware GLCD</span>
+                    </div>
+                </div>
+
+                <div class="skill-card skill-card--qa" data-animate="fade-up" data-delay="500">
+                    <div class="skill-card-header">
+                        <div class="skill-icon skill-icon--qa">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                        </div>
+                        <span class="skill-badge skill-badge--qa">Software Engineering</span>
+                    </div>
+                    <h3 class="skill-name">Software Engineering &amp; QA</h3>
+                    <p class="skill-desc">Rigorous software quality assurance: white-box unit test suites with pytest for backend logic verification, automated end-to-end browser UI testing with Selenium, and Git/GitLab workflows.</p>
+                    <div class="skill-meter">
+                        <div class="meter-bar"><span class="meter-fill meter-fill--qa" style="width: 88%;"></span></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">pytest</span>
+                        <span class="tag">Selenium</span>
+                        <span class="tag">White-Box Testing</span>
+                        <span class="tag">Git &amp; GitLab</span>
+                        <span class="tag">SSH Auth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED PROJECTS ========== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">
+                <span class="section-number">04.</span> Featured Projects
+            </h2>
+            <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+                Flagship 3D environments, real-time visual computing, and look development across Blender and Unreal Engine 5.
+            </p>
+
+            <!-- Platform Filter Tabs -->
+            <div class="platform-filter-bar" data-animate="fade-up" data-delay="150">
+                <button class="platform-filter-btn active" data-filter="all">
+                    <span class="filter-dot filter-dot--all"></span>
+                    <span>All Works</span>
+                    <span class="filter-count">3</span>
+                </button>
+                <button class="platform-filter-btn platform-filter-btn--blender" data-filter="blender">
+                    <span class="filter-dot filter-dot--blender"></span>
+                    <span>Blender</span>
+                    <span class="filter-count">1</span>
+                </button>
+                <button class="platform-filter-btn platform-filter-btn--unreal" data-filter="unreal">
+                    <span class="filter-dot filter-dot--unreal"></span>
+                    <span>Unreal Engine</span>
+                    <span class="filter-count">2</span>
+                </button>
+            </div>
+
+            <!-- ===== PLATFORM 1: BLENDER ===== -->
+            <div class="platform-section platform-section--blender" data-platform="blender" data-animate="fade-up" data-delay="0">
+                <div class="platform-header platform-header--blender">
+                    <div class="platform-header-left">
+                        <div class="platform-icon platform-icon--blender">
+                            <!-- Blender Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M12 3v9l6 3"></path>
+                                <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="platform-title-row">
+                                <h3 class="platform-name">Blender</h3>
+                                <span class="platform-badge platform-badge--blender">3D Art &amp; LookDev</span>
+                            </div>
+                            <p class="platform-desc">3D Modeling, UV Unwrapping, PBR Materials, and Photorealistic Rendering in Cycles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card project-card--blender project-card--featured" data-animate="fade-up" data-delay="100">
+                        <div class="project-media-showcase">
+                            <!-- Clickable Hero Render -->
+                            <div class="project-media project-media--clickable" id="saloon-media-trigger" role="button" tabindex="0" aria-label="Open 16 render gallery for La Bastille Saloon">
+                                <img src="media/saloon/Inquadratura05.02.jpg" alt="La Bastille Saloon — 3D Environment Blender" loading="lazy" class="project-thumbnail">
+                                <div class="project-media-badge project-media-badge--blender">16 Cycles Renders</div>
+                                <div class="project-media-hover-overlay">
+                                    <div class="media-hover-content">
+                                        <span class="media-hover-icon">
+                                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                        </span>
+                                        <span class="media-hover-text">Explore 16 LookDev Renders</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mini Preview Thumbnails Row -->
+                            <div class="project-thumb-preview-strip">
+                                <button class="thumb-preview-item" data-render-index="0" type="button" title="View Poker Table Close-Up">
+                                    <img src="media/saloon/Inquadratura01.jpg" alt="Poker Table" loading="lazy">
+                                    <span class="thumb-tag">Props</span>
+                                </button>
+                                <button class="thumb-preview-item" data-render-index="4" type="button" title="View Hardwood Bar Counter">
+                                    <img src="media/saloon/Inquadratura04.jpg" alt="Bar Counter" loading="lazy">
+                                    <span class="thumb-tag">Details</span>
+                                </button>
+                                <button class="thumb-preview-item" data-render-index="2" type="button" title="View Panoramic Overview">
+                                    <img src="media/saloon/Inquadratura02.jpg" alt="Panoramic Overview" loading="lazy">
+                                    <span class="thumb-tag">Panorama</span>
+                                </button>
+                                <button class="thumb-preview-item" data-render-index="12" type="button" title="View Volumetric Lighting">
+                                    <img src="media/saloon/Inquadratura14.jpg" alt="Volumetric Dust" loading="lazy">
+                                    <span class="thumb-tag">Lighting</span>
+                                </button>
+                                <button class="thumb-preview-item thumb-preview-more" data-render-index="0" type="button" title="Open Complete 16 Renders Gallery">
+                                    <span class="more-count">+12</span>
+                                    <span class="more-label">Renders</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag project-tag--blender">Blender 3D Modeling &amp; Environment</span>
+                            <h3 class="project-title">La Bastille Saloon</h3>
+                            <p class="project-desc">
+                                Complete 3D interior environment of an authentic historical western saloon, modeled entirely in Blender. Features modular architecture, intricately detailed props (poker tables with cards and chips, weathered wooden bar counter, brass chandeliers, second-floor balconies, and staircases), realistic PBR materials, and advanced atmospheric Cycles lighting showcased across 16 cinematic camera shots.
+                            </p>
+                            <div class="project-specs">
+                                <span class="spec-pill">Blender</span>
+                                <span class="spec-pill">Cycles Engine (4096 Samples)</span>
+                                <span class="spec-pill">PBR Materials</span>
+                                <span class="spec-pill">16 Camera Angles</span>
+                                <span class="spec-pill">Modular Props</span>
+                                <span class="spec-pill">Volumetric Dust</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-primary project-gallery-trigger-btn" id="open-saloon-gallery" type="button">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                                    <span>Explore LookDev Gallery (16 Renders)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== PLATFORM 2: UNREAL ENGINE ===== -->
+            <div class="platform-section platform-section--unreal" data-platform="unreal" data-animate="fade-up" data-delay="100">
+                <div class="platform-header platform-header--unreal">
+                    <div class="platform-header-left">
+                        <div class="platform-icon platform-icon--unreal">
+                            <!-- Unreal Engine Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="platform-title-row">
+                                <h3 class="platform-name">Unreal Engine 5</h3>
+                                <span class="platform-badge platform-badge--unreal">AAA Real-Time & Virtual Production</span>
+                            </div>
+                            <p class="platform-desc">Lumen Dynamic Global Illumination, Nanite Geometry, Digital Humans (MetaHuman), and Look Development</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured MetaHuman Flagship Card -->
+                <div class="projects-grid">
+                    <div class="project-card project-card--unreal project-card--metahuman project-card--featured" data-animate="fade-up" data-delay="150">
+                        
+                        <!-- Top Overview Area: Hero Showcase & Technical Bio -->
+                        <div class="metahuman-overview">
+                            <div class="metahuman-hero-column">
+                                <div class="project-media project-media--clickable" id="metahuman-media-trigger" role="button" tabindex="0" aria-label="Open 10 shot pipeline gallery for MetaHuman Digital Double">
+                                    <img src="media/metahuman/TA-G08-Finale-Presentazione (4).png" alt="MetaHuman 1 Digital Double — Federico Pintabona in Unreal Engine 5" loading="lazy" class="project-thumbnail">
+                                    <div class="project-media-badge project-media-badge--unreal">10 Pipeline Shots • UE5</div>
+                                    <div class="project-media-hover-overlay project-media-hover-overlay--unreal">
+                                        <div class="media-hover-content media-hover-content--unreal">
+                                            <span class="media-hover-icon media-hover-icon--unreal">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                            </span>
+                                            <span class="media-hover-text">Explore LookDev &amp; Mocap Pipeline</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="metahuman-quick-stats">
+                                    <div class="quick-stat-item">
+                                        <span class="quick-stat-num">160</span>
+                                        <span class="quick-stat-label">Scan Photos</span>
+                                    </div>
+                                    <div class="quick-stat-sep"></div>
+                                    <div class="quick-stat-item">
+                                        <span class="quick-stat-num">Cycles &amp; UE5</span>
+                                        <span class="quick-stat-label">Dual Pipeline</span>
+                                    </div>
+                                    <div class="quick-stat-sep"></div>
+                                    <div class="quick-stat-item">
+                                        <span class="quick-stat-num">60 FPS</span>
+                                        <span class="quick-stat-label">TrueDepth Mocap</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="metahuman-info-column">
+                                <span class="project-tag project-tag--unreal">Unreal Engine 5 • Digital Double &amp; Facial Mocap</span>
+                                <h3 class="project-title">MetaHuman 1 — Main Actor (Federico)</h3>
+                                <p class="project-desc">
+                                    A photorealistic digital double engineered for hyper-realism and real-time performance. Reconstructed via single-camera 360° photogrammetry using 160 photos, conformed in Blender with sculpting brushes (<code>Clay Strips</code>, <code>Smooth</code>, <code>Flatten</code>) to remove beard geometry and high-frequency noise, converted into an Unreal Engine <strong>MetaHuman Identity</strong> with custom strand grooms and SSS skin, and driven live with iPhone TrueDepth via LiveLink Face.
+                                </p>
+                                <div class="project-specs">
+                                    <span class="spec-pill">160-Photo 360° Photogrammetry</span>
+                                    <span class="spec-pill">Blender Sculpting (Clay Strips / Flatten)</span>
+                                    <span class="spec-pill">Scan to MetaHuman Identity</span>
+                                    <span class="spec-pill">Strand Hair &amp; Beard Grooms</span>
+                                    <span class="spec-pill">iPhone TrueDepth LiveLink</span>
+                                    <span class="spec-pill">UE Take Recorder</span>
+                                </div>
+                                <div class="project-links">
+                                    <button class="btn btn-primary project-gallery-trigger-btn project-gallery-trigger-btn--unreal" id="open-metahuman-gallery" type="button">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                                        <span>Explore Full Pipeline (10 Shots)</span>
+                                    </button>
+                                    <a href="https://youtu.be/jd8oNUgPNFU?si=MLkipyfDIhCtcGg_" target="_blank" rel="noopener noreferrer" class="project-link project-link--unreal">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                        Watch Performance on YouTube
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Section: 3-Column Production Pipeline Workflow -->
+                        <div class="metahuman-workflow-section">
+                            <div class="metahuman-workflow-header">
+                                <div class="workflow-header-title-wrap">
+                                    <span class="workflow-tag">Production Milestones</span>
+                                    <h4 class="workflow-title">End-to-End Pipeline Workflow</h4>
+                                </div>
+                                <span class="workflow-hint">Click any asset to inspect in 4K LookDev Viewer</span>
+                            </div>
+
+                            <div class="metahuman-workflow-grid">
+                                <!-- Stage 01: 3D Scan & Sculpting -->
+                                <div class="workflow-stage-card">
+                                    <div class="stage-card-header">
+                                        <span class="stage-num-badge">01</span>
+                                        <div>
+                                            <h5 class="stage-title">3D Scan &amp; Mesh Sculpting</h5>
+                                            <p class="stage-subtitle">Photogrammetry &amp; Base Mesh Cleanup</p>
+                                        </div>
+                                    </div>
+                                    <p class="stage-desc">
+                                        Single-camera 360° photogrammetry (160 photos) conformed in Blender. Scanned beard removal and topology clean-up using <code>Clay Strips</code>, <code>Smooth</code>, and <code>Flatten</code> sculpting brushes.
+                                    </p>
+                                    <div class="stage-gallery-flow">
+                                        <!-- Featured Image for Step 1: Blender Sculpt -->
+                                        <div class="stage-thumb-card stage-thumb-card--hero" data-metahuman-index="2" role="button" tabindex="0" title="Blender Mesh Cleanup & Sculpting">
+                                            <img src="media/metahuman/TA-G08-Finale-Presentazione (6).png" alt="Blender Mesh Sculpting" loading="lazy">
+                                            <span class="stage-thumb-tag">Blender Sculpting</span>
+                                            <span class="stage-thumb-zoom-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                            </span>
+                                        </div>
+                                        <!-- Duo Row: Actor Ref & 160-Scan -->
+                                        <div class="stage-gallery-duo">
+                                            <div class="stage-thumb-card" data-metahuman-index="0" role="button" tabindex="0" title="Studio Photographic Reference (Ground Truth)">
+                                                <img src="media/metahuman/TA-G08-Finale-Presentazione (8).png" alt="Actor Reference" loading="lazy">
+                                                <span class="stage-thumb-tag">Ground Truth</span>
+                                            </div>
+                                            <div class="stage-thumb-card" data-metahuman-index="1" role="button" tabindex="0" title="160-Photo 360° Point Cloud Scan">
+                                                <img src="media/metahuman/TA-G08-Finale-Presentazione (5).png" alt="160-Camera Scan" loading="lazy">
+                                                <span class="stage-thumb-tag">360° Point Cloud</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 02: Scan to MetaHuman Identity -->
+                                <div class="workflow-stage-card">
+                                    <div class="stage-card-header">
+                                        <span class="stage-num-badge">02</span>
+                                        <div>
+                                            <h5 class="stage-title">Scan to MetaHuman Identity</h5>
+                                            <p class="stage-subtitle">UE5 Identity Fitting &amp; LookDev</p>
+                                        </div>
+                                    </div>
+                                    <p class="stage-desc">
+                                        Conversion of conformed mesh into UE5 MetaHuman Identity. Procedural multilayer SSS skin calibration, physical sclera/iris shaders, strand hair/beard grooms, and in-engine lighting.
+                                    </p>
+                                    <div class="stage-gallery-flow">
+                                        <!-- Featured Image for Step 2: Identity Fitting Portrait -->
+                                        <div class="stage-thumb-card stage-thumb-card--hero" data-metahuman-index="3" role="button" tabindex="0" title="MetaHuman Identity Final Portrait">
+                                            <img src="media/metahuman/TA-G08-Finale-Presentazione (4).png" alt="MetaHuman Identity Portrait" loading="lazy">
+                                            <span class="stage-thumb-tag">Identity Fitting</span>
+                                            <span class="stage-thumb-zoom-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                            </span>
+                                        </div>
+                                        <!-- Duo Row: Subway Scene & SSS Macro -->
+                                        <div class="stage-gallery-duo">
+                                            <div class="stage-thumb-card" data-metahuman-index="4" role="button" tabindex="0" title="In-Engine Subway Car Scene (Lumen)">
+                                                <img src="media/metahuman/TA-G08-Finale-Presentazione (7).png" alt="Subway Car Scene" loading="lazy">
+                                                <span class="stage-thumb-tag">Subway Scene</span>
+                                            </div>
+                                            <div class="stage-thumb-card" data-metahuman-index="9" role="button" tabindex="0" title="SSS Skin & Micro-Groom LookDev Close-Up">
+                                                <img src="media/metahuman/TA-G08-Finale-Presentazione (13).png" alt="SSS LookDev Macro" loading="lazy">
+                                                <span class="stage-thumb-tag">SSS &amp; Groom</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 03: Facial Performance Capture -->
+                                <div class="workflow-stage-card">
+                                    <div class="stage-card-header">
+                                        <span class="stage-num-badge">03</span>
+                                        <div>
+                                            <h5 class="stage-title">Facial Mocap &amp; Take Recorder</h5>
+                                            <p class="stage-subtitle">Live TrueDepth Performance Climax</p>
+                                        </div>
+                                    </div>
+                                    <p class="stage-desc">
+                                        Facial performance depicting an ascending emotional climax of anxiety and tension from a calm baseline. Streamed via iPhone TrueDepth (LiveLink Face) and recorded directly with UE Take Recorder.
+                                    </p>
+                                    <div class="stage-gallery-flow">
+                                        <!-- Quad 2x2 Grid for the 4 Emotional Progression Phases -->
+                                        <div class="stage-gallery-quad">
+                                            <div class="stage-thumb-card" data-metahuman-index="5" role="button" tabindex="0" title="Phase 1: Neutral Baseline">
+                                                <img src="media/metahuman/TA-G08-Finale-Presentazione (9).png" alt="Facial Mocap Phase 1" loading="lazy">
+                                                <span class="stage-thumb-tag">Phase 01: Neutral</span>
+                                            </div>
+                                            <div class="stage-thumb-card" data-metahuman-index="6" role="button" tabindex="0" title="Phase 2: Lateral Glances & Anxiety">
+                                                <img src="media/metahuman/TA-G08-Finale-Presentazione (10).png" alt="Facial Mocap Phase 2" loading="lazy">
+                                                <span class="stage-thumb-tag">Phase 02: Glances</span>
+                                            </div>
+                                            <div class="stage-thumb-card" data-metahuman-index="7" role="button" tabindex="0" title="Phase 3: Rising Panic Dynamics">
+                                                <img src="media/metahuman/TA-G08-Finale-Presentazione (11).png" alt="Facial Mocap Phase 3" loading="lazy">
+                                                <span class="stage-thumb-tag">Phase 03: Strain</span>
+                                            </div>
+                                            <div class="stage-thumb-card" data-metahuman-index="8" role="button" tabindex="0" title="Phase 4: Acute Emotional Climax">
+                                                <img src="media/metahuman/TA-G08-Finale-Presentazione (12).png" alt="Facial Mocap Phase 4" loading="lazy">
+                                                <span class="stage-thumb-tag">Phase 04: Climax</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Featured Environment Flagship Card -->
+                <div class="projects-grid" style="margin-top: 2rem;">
+                    <div class="project-card project-card--unreal project-card--environment project-card--featured" data-animate="fade-up" data-delay="180">
+                        
+                        <!-- Top Overview Area: Hero Showcase & Technical Specs -->
+                        <div class="environment-overview">
+                            <div class="environment-hero-column">
+                                <div class="project-media project-media--autoplay" id="environment-video-autoplay">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/W_AC5caENeg?autoplay=1&mute=1&loop=1&playlist=W_AC5caENeg&controls=1&rel=0&playsinline=1&modestbranding=1" 
+                                        title="Unreal Engine 5 Japanese Sanctuary Cinematic Showcase"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        loading="lazy"
+                                        class="hero-autoplay-iframe">
+                                    </iframe>
+                                    <div class="project-media-badge--autoplay">
+                                        <span class="badge-live-dot"></span>
+                                        <span>Live Showcase • UE5</span>
+                                    </div>
+                                </div>
+                                <div class="environment-quick-stats">
+                                    <div class="quick-stat-item">
+                                        <span class="quick-stat-num">Lumen GI</span>
+                                        <span class="quick-stat-label">Dynamic Lighting</span>
+                                    </div>
+                                    <div class="quick-stat-sep"></div>
+                                    <div class="quick-stat-item">
+                                        <span class="quick-stat-num">Nanite Mesh</span>
+                                        <span class="quick-stat-label">Micro-Polygons</span>
+                                    </div>
+                                    <div class="quick-stat-sep"></div>
+                                    <div class="quick-stat-item">
+                                        <span class="quick-stat-num">44.4 FPS</span>
+                                        <span class="quick-stat-label">Real-Time In-Engine</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="environment-info-column">
+                                <span class="project-tag project-tag--unreal">Unreal Engine 5 • Real-Time Cinematic Environment</span>
+                                <h3 class="project-title">Cinematic Environment — Japanese Sanctuary</h3>
+                                <p class="project-desc">
+                                    A photorealistic real-time Japanese garden and cliffside sanctuary environment built and lit in Unreal Engine 5. Leverages <strong>Lumen</strong> dynamic global illumination for physical indirect light bouncing, <strong>Nanite</strong> virtualized micro-polygon geometry for sub-pixel asset fidelity, volumetric fog with piercing sun god rays, procedural water surface shaders with caustics and Screen-Space Reflections (SSR), and instanced wind-animated foliage running live at interactive frame rates.
+                                </p>
+                                <div class="project-specs">
+                                    <span class="spec-pill">Unreal Engine 5</span>
+                                    <span class="spec-pill">Lumen Dynamic GI</span>
+                                    <span class="spec-pill">Nanite Micro-Polygon Geometry</span>
+                                    <span class="spec-pill">Volumetric Fog &amp; God Rays</span>
+                                    <span class="spec-pill">Water Body Plugin &amp; Caustics</span>
+                                    <span class="spec-pill">Instanced Foliage</span>
+                                    <span class="spec-pill">Cinematic Post-Processing</span>
+                                    <span class="spec-pill">In-Engine 44+ FPS</span>
+                                </div>
+                                <div class="project-links">
+                                    <button class="btn btn-primary project-gallery-trigger-btn project-gallery-trigger-btn--unreal" id="open-environment-gallery" type="button">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                                        <span>Explore High-Res Views (4 Renders)</span>
+                                    </button>
+                                    <a href="https://youtu.be/W_AC5caENeg?si=aaQAuz4_p19UFNR0" target="_blank" rel="noopener noreferrer" class="project-link project-link--unreal">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                        Watch Cinematic on YouTube
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Section: 3-Column Production Pipeline Workflow -->
+                        <div class="environment-workflow-section">
+                            <div class="environment-workflow-header">
+                                <div class="workflow-header-title-wrap">
+                                    <span class="workflow-tag">Environment Production Pillars</span>
+                                    <h4 class="workflow-title">Real-Time World Building &amp; Technical Breakdown</h4>
+                                </div>
+                                <span class="workflow-hint">Click any asset to inspect in 4K LookDev Viewer</span>
+                            </div>
+
+                            <div class="environment-workflow-grid">
+                                <!-- Stage 01: Architectural Assets & Level Design -->
+                                <div class="workflow-stage-card">
+                                    <div class="stage-card-header">
+                                        <span class="stage-num-badge">01</span>
+                                        <div>
+                                            <h5 class="stage-title">Pagoda Overlook &amp; Ridge</h5>
+                                            <p class="stage-subtitle">Nanite Geometry &amp; Asian Architecture</p>
+                                        </div>
+                                    </div>
+                                    <p class="stage-desc">
+                                        Modular traditional East Asian wooden structures, hand-crafted roof tile geometry, and stone pagoda shrines perched over steep mountain cliffs. Optimized with Nanite geometry for smooth LOD transitions and sub-pixel micro-detail.
+                                    </p>
+                                    <div class="stage-gallery-flow">
+                                        <div class="stage-thumb-card stage-thumb-card--hero" data-environment-index="1" role="button" tabindex="0" title="Pagoda Overlook & Mountain Ridge (Nanite Micro-Polygon Geometry)">
+                                            <img src="media/envirorment/TA-G08-Finale-Presentazione (1).png" alt="Pagoda Overlook & Mountain Ridge" loading="lazy">
+                                            <span class="stage-thumb-tag">Pagoda Overlook • Nanite</span>
+                                            <span class="stage-thumb-zoom-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 02: Dynamic Lighting & Courtyard LookDev -->
+                                <div class="workflow-stage-card">
+                                    <div class="stage-card-header">
+                                        <span class="stage-num-badge">02</span>
+                                        <div>
+                                            <h5 class="stage-title">Temple Courtyard &amp; Zen Garden</h5>
+                                            <p class="stage-subtitle">Lumen Dynamic Global Illumination</p>
+                                        </div>
+                                    </div>
+                                    <p class="stage-desc">
+                                        Real-time multi-bounce indirect lighting powered by Lumen. Natural sunlight bounces off limestone steps, timber pavilions, and blooming cherry blossom foliage with physically calibrated exposure.
+                                    </p>
+                                    <div class="stage-gallery-flow">
+                                        <div class="stage-thumb-card stage-thumb-card--hero" data-environment-index="2" role="button" tabindex="0" title="Temple Courtyard & Zen Garden (Lumen Dynamic Global Illumination)">
+                                            <img src="media/envirorment/TA-G08-Finale-Presentazione (2).png" alt="Temple Courtyard & Zen Garden" loading="lazy">
+                                            <span class="stage-thumb-tag">Zen Courtyard • Lumen GI</span>
+                                            <span class="stage-thumb-zoom-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 03: Aquatic Shaders & Volumetric VFX -->
+                                <div class="workflow-stage-card">
+                                    <div class="stage-card-header">
+                                        <span class="stage-num-badge">03</span>
+                                        <div>
+                                            <h5 class="stage-title">Lakeside Pond &amp; God Rays</h5>
+                                            <p class="stage-subtitle">Water Caustics &amp; Volumetric Fog</p>
+                                        </div>
+                                    </div>
+                                    <p class="stage-desc">
+                                        Procedural aquatic shader featuring dynamic caustics, SSR reflections, and floating lily pads. Volumetric scattering generates cinematic god rays through the gorge, verified live at 44.43 FPS in-engine.
+                                    </p>
+                                    <div class="stage-gallery-flow">
+                                        <div class="stage-thumb-card stage-thumb-card--hero" data-environment-index="3" role="button" tabindex="0" title="Lakeside Pond & Volumetric God Rays (Real-Time 44+ FPS in UE5)">
+                                            <img src="media/envirorment/TA-G08-Finale-Presentazione (3).png" alt="Lakeside Pond & Volumetric God Rays" loading="lazy">
+                                            <span class="stage-thumb-tag">Water &amp; Caustics • 44.4 FPS</span>
+                                            <span class="stage-thumb-zoom-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== GITHUB REPOSITORIES ========== -->
+    <section class="section repositories" id="repositories">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">
+                <span class="section-number">05.</span> GitHub Repositories
+            </h2>
+            <p class="section-subtitle" data-animate="fade-up" data-delay="100">
+                Low-level GPU acceleration kernels, parallel algorithms, graphics engines, and bare-metal embedded C implementations.
+            </p>
+
+            <!-- Telemetry Banner -->
+            <div class="github-archive-telemetry" data-animate="fade-up" data-delay="150">
+                <div class="telemetry-stat-card">
+                    <span class="telemetry-stat-num" id="repo-stat-count">3</span>
+                    <span class="telemetry-stat-label">Repositories</span>
+                </div>
+                <div class="telemetry-stat-card">
+                    <span class="telemetry-stat-num" id="repo-stat-stars">2</span>
+                    <span class="telemetry-stat-label">Total Stars</span>
+                </div>
+                <div class="telemetry-stat-card">
+                    <span class="telemetry-stat-num" id="repo-stat-forks">0</span>
+                    <span class="telemetry-stat-label">Forks Received</span>
+                </div>
+                <div class="telemetry-stat-card">
+                    <span class="telemetry-stat-num" id="repo-stat-followers">0</span>
+                    <span class="telemetry-stat-label">Followers</span>
+                </div>
+                <div class="telemetry-actions">
+                    <button id="repo-sync-btn" class="telemetry-profile-btn telemetry-sync-btn" title="Refresh repositories live from GitHub API">
+                        <svg id="repo-sync-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                        </svg>
+                        <span id="repo-sync-text">Live Sync</span>
+                    </button>
+                    <a href="https://github.com/FedePint" target="_blank" rel="noopener noreferrer" class="telemetry-profile-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        <span>Open GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Language Filter Bar (Populated dynamically by JavaScript) -->
+            <div class="repo-filter-bar" id="repo-filter-bar" data-animate="fade-up" data-delay="200">
+                <span class="repo-filter-title">Filter by Language:</span>
+                <span class="repo-filter-loading">Syncing languages...</span>
+            </div>
+
+            <!-- Repos Grid -->
+            <div class="github-repos-grid" id="github-repos-grid" data-animate="fade-up" data-delay="250">
+                <div class="github-loading">
+                    <div class="spinner"></div>
+                    <p>Syncing repositories from GitHub...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">
+                <span class="section-number">06.</span> Get in Touch
+            </h2>
+            <div class="contact-content">
+                <p class="contact-text" data-animate="fade-up" data-delay="100">
+                    Currently pursuing my Master's Degree in Computer Engineering at <strong>Politecnico di Torino</strong>. 
+                    I'm actively open to opportunities in High-Performance Computing, GPU acceleration, Computer Graphics, Technical Art, and Software Engineering.
+                </p>
+                <div class="contact-methods" data-animate="fade-up" data-delay="200">
+                    <a href="mailto:federicopintabona12@gmail.com" class="contact-card" id="contact-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">federicopintabona12@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/FedePint" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/FedePint</span>
+                    </a>
+                    <div class="contact-card contact-card--disabled" id="contact-linkedin" title="LinkedIn profile currently disabled">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">Disabled</span>
+                    </div>
+                    <div class="contact-card" id="contact-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">Turin, Italy</span>
+                    </div>
+                </div>
+
+                <!-- CV Download Box -->
+                <div class="contact-cv-box" data-animate="fade-up" data-delay="300">
+                    <div class="cv-box-content">
+                        <div class="cv-box-icon">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div>
+                            <h3 class="cv-box-title">Curriculum Vitae</h3>
+                            <p class="cv-box-desc">Download my technical resume featuring academic background at Politecnico di Torino, GPU &amp; graphics projects, and technical skills.</p>
+                        </div>
+                    </div>
+                    <a href="assets/docs/CV_Federico_Pintabona.pdf" download="CV_Federico_Pintabona.pdf" class="btn btn-primary cv-download-btn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <span>Download CV (PDF)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Federico Pintabona</p>
+                <p class="footer-credit">
+                    Computer Engineering Student • Politecnico di Torino
+                    <span class="footer-sep">•</span>
+                    Turin, Italy
+                </p>
+                <p class="footer-copy">&copy; 2026 Federico Pintabona — Built with precision &amp; <span class="footer-heart">♥</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== 3D LOOKDEV VIEWER / LIGHTBOX MODAL ========== -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="3D LookDev Viewer" aria-hidden="true">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-modal">
+            <!-- Modal Header -->
+            <div class="lightbox-header">
+                <div class="lightbox-title-wrap">
+                    <span class="lightbox-badge" id="lightbox-badge">Blender LookDev • Cycles</span>
+                    <h3 class="lightbox-title" id="lightbox-title">La Bastille Saloon</h3>
+                </div>
+                <!-- In-Modal Category Filter -->
+                <div class="lightbox-filters" id="lightbox-filters">
+                    <button class="lightbox-filter-btn active" data-category="all">All (16)</button>
+                    <button class="lightbox-filter-btn" data-category="panoramic">Panoramas (7)</button>
+                    <button class="lightbox-filter-btn" data-category="details">Props &amp; Details (6)</button>
+                    <button class="lightbox-filter-btn" data-category="lighting">Lighting (3)</button>
+                </div>
+                <button class="lightbox-close" id="lightbox-close" aria-label="Close viewer">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+
+            <!-- Modal Stage -->
+            <div class="lightbox-stage">
+                <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous render">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <div class="lightbox-main-view">
+                    <div class="lightbox-img-wrapper">
+                        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+                    </div>
+                    <div class="lightbox-meta">
+                        <p class="lightbox-caption" id="lightbox-caption"></p>
+                        <div class="lightbox-counter-badge" id="lightbox-counter">1 / 16</div>
+                    </div>
+                </div>
+                <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next render">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+
+            <!-- Bottom Filmstrip Thumbnails -->
+            <div class="lightbox-filmstrip-wrap">
+                <div class="lightbox-filmstrip" id="lightbox-filmstrip">
+                    <!-- 16 thumbnails dynamically rendered by JS -->
+                </div>
+            </div>
+
+            <!-- Keyboard shortcut hints -->
+            <div class="lightbox-footer-hints">
+                <span><kbd>←</kbd> <kbd>→</kbd> Navigate</span>
+                <span><kbd>ESC</kbd> Close</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Back-to-Top Button with circular progress indicator -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+            <circle class="progress-ring__circle" stroke-width="2.5" fill="transparent" r="20" cx="23" cy="23"/>
+        </svg>
+        <svg class="arrow-up-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
