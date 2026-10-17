@@ -445,72 +445,37 @@ a:focus-visible {
 
 .hero-name {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 9vw, 5.75rem);
+    font-size: clamp(3rem, 8.5vw, 5.5rem);
     font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 1.05;
-    margin-bottom: 1.25rem;
-    background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 40%, #ffffff 80%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: fadeInUp 0.8s var(--ease-out-expo) 0.5s forwards, 
-               shimmer 7s linear infinite 1.5s;
+    margin-bottom: 1.15rem;
+    color: #ffffff;
+    animation: fadeInUp 0.8s var(--ease-out-expo) 0.3s forwards;
     opacity: 0;
-    filter: drop-shadow(0 0 35px rgba(139, 92, 246, 0.25));
 }
 
-@keyframes shimmer {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
-}
-
-.hero-title {
-    font-size: clamp(1.05rem, 2.5vw, 1.35rem);
-    color: var(--text-secondary);
-    margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeInUp 0.8s var(--ease-out-expo) 0.7s forwards;
-}
-
-.title-accent {
-    color: var(--text-primary);
-    font-weight: 600;
-}
-
-.title-separator {
-    color: var(--accent-primary);
-    opacity: 0.6;
-}
-
-.title-typed {
-    color: var(--accent-glow);
-    font-weight: 600;
+.hero-headline {
     font-family: var(--font-heading);
-}
-
-.cursor-blink {
-    color: var(--accent-primary);
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
+    font-size: clamp(1.2rem, 2.7vw, 1.65rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.15rem;
+    letter-spacing: -0.015em;
+    line-height: 1.35;
+    max-width: 780px;
+    opacity: 0;
+    animation: fadeInUp 0.8s var(--ease-out-expo) 0.5s forwards;
 }
 
 .hero-subtitle {
-    font-size: 1.15rem;
-    color: var(--text-muted);
+    font-size: 1.08rem;
+    color: var(--text-secondary);
     margin-bottom: 2.25rem;
-    max-width: 620px;
+    max-width: 680px;
+    line-height: 1.65;
     opacity: 0;
-    animation: fadeInUp 0.8s var(--ease-out-expo) 0.85s forwards;
+    animation: fadeInUp 0.8s var(--ease-out-expo) 0.7s forwards;
 }
 
 .hero-cta {
@@ -1272,30 +1237,32 @@ a:focus-visible {
     flex: 1;
 }
 
-/* Fluency meter */
-.skill-meter {
+/* Specialization Focus Line */
+.skill-focus-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
     margin-bottom: 1.25rem;
+    padding: 0.4rem 0.85rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    width: fit-content;
 }
 
-.meter-bar {
-    width: 100%;
-    height: 4px;
+.focus-label {
+    font-weight: 700;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+    padding: 0.15rem 0.45rem;
     background: rgba(255, 255, 255, 0.08);
-    border-radius: 4px;
-    overflow: hidden;
+    border-radius: 3px;
 }
-
-.meter-fill {
-    display: block;
-    height: 100%;
-    border-radius: 4px;
-}
-.meter-fill--blender { background: var(--color-blender); box-shadow: 0 0 8px var(--color-blender-glow); }
-.meter-fill--unreal { background: var(--color-unreal); box-shadow: 0 0 8px var(--color-unreal-glow); }
-.meter-fill--opengl { background: var(--color-opengl); box-shadow: 0 0 8px var(--color-opengl-glow); }
-.meter-fill--cuda { background: var(--color-cuda); box-shadow: 0 0 8px var(--color-cuda-glow); }
-.meter-fill--embedded { background: var(--color-embedded); box-shadow: 0 0 8px var(--color-embedded-glow); }
-.meter-fill--qa { background: linear-gradient(90deg, #38bdf8, #0ea5e9); box-shadow: 0 0 8px rgba(56, 189, 248, 0.4); }
 
 .skill-tags {
     display: flex;
@@ -4075,4 +4042,48 @@ a:focus-visible {
 .nav-overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+/* ============================================
+   DESIGN ENGINEERING & ACCESSIBILITY (UI-SKILLS)
+   Standards from leonxlnx/taste-skill, emilkowalski/emil-design-eng & arla6ka/ui-review
+   ============================================ */
+
+/* 1. Accessible Focus Rings for Keyboard Navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--accent-glow) !important;
+    outline-offset: 3px !important;
+}
+
+/* 2. Hardware-accelerated smooth animations & tone-step boundaries */
+.skill-card:hover,
+.project-card:hover,
+.education-card:hover {
+    transition: transform 220ms var(--ease-out-expo),
+                border-color 220ms ease,
+                box-shadow 220ms ease !important;
+}
+
+/* 3. Prefers-Reduced-Motion Accessibility Gate */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-canvas {
+        display: none !important;
+    }
+    
+    [data-animate] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }

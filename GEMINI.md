@@ -116,8 +116,9 @@ portfolio/
 | Implementazione JS          | ✅ Completata | 2026-10-15 |
 | Asset e immagini            | ✅ Ottimizzate (media/saloon, media/metahuman, media/envirorment) | 2026-10-16 |
 | Responsive design           | ✅ Completato | 2026-10-15 |
-| Test e polish               | 🔄 In corso  | 2026-10-16 |
-| Deploy su GitHub Pages      | ⬜ Da fare    |            |
+| Test e polish               | ✅ Completato | 2026-10-18 |
+| Repository Git locale       | ✅ Inizializzata (branch main) | 2026-10-18 |
+| Deploy su GitHub Pages      | 🔄 Pronto al push | 2026-10-18 |
  
 ---
  

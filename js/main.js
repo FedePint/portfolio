@@ -427,29 +427,42 @@ function initHeroInteractiveCanvas() {
     const canvas = document.getElementById('hero-canvas');
     if (!canvas) return;
 
+    // Respect reduced-motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const ctx = canvas.getContext('2d');
     let width, height;
+    let dpr = 1;
     let particles = [];
     let mouse = { x: null, y: null, radius: 140 };
 
     function resize() {
-        width = canvas.width = canvas.offsetWidth;
-        height = canvas.height = canvas.offsetHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const displayWidth = canvas.offsetWidth;
+        const displayHeight = canvas.offsetHeight;
+        
+        canvas.width = displayWidth * dpr;
+        canvas.height = displayHeight * dpr;
+        width = displayWidth;
+        height = displayHeight;
+        
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(dpr, dpr);
         createParticles();
     }
 
     function createParticles() {
         particles = [];
-        const count = Math.min(Math.floor((width * height) / 14000), 75);
+        const count = Math.min(Math.floor((width * height) / 16000), 65);
         for (let i = 0; i < count; i++) {
             particles.push({
                 x: Math.random() * width,
                 y: Math.random() * height,
-                vx: (Math.random() - 0.5) * 0.7,
-                vy: (Math.random() - 0.5) * 0.7,
-                radius: Math.random() * 1.8 + 1,
+                vx: (Math.random() - 0.5) * 0.6,
+                vy: (Math.random() - 0.5) * 0.6,
+                radius: Math.random() * 1.6 + 1,
                 color: Math.random() > 0.4 ? 'rgba(167, 139, 250, ' : 'rgba(0, 168, 255, ',
-                alpha: Math.random() * 0.5 + 0.2
+                alpha: Math.random() * 0.45 + 0.2
             });
         }
     }
@@ -474,7 +487,21 @@ function initHeroInteractiveCanvas() {
     });
 
     let animationFrameId;
+    let isRunning = true;
+
+    // Invisible tab pausing (Sonner principle - zero CPU waste)
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            isRunning = false;
+            cancelAnimationFrame(animationFrameId);
+        } else if (!isRunning) {
+            isRunning = true;
+            animationFrameId = requestAnimationFrame(animate);
+        }
+    });
+
     function animate() {
+        if (!isRunning) return;
         ctx.clearRect(0, 0, width, height);
 
         for (let i = 0; i < particles.length; i++) {
@@ -488,15 +515,15 @@ function initHeroInteractiveCanvas() {
             if (p.x < 0 || p.x > width) p.vx *= -1;
             if (p.y < 0 || p.y > height) p.vy *= -1;
 
-            // Mouse proximity interaction (subtle attraction/repulsion)
+            // Mouse proximity interaction
             if (mouse.x !== null && mouse.y !== null) {
                 const dx = mouse.x - p.x;
                 const dy = mouse.y - p.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < mouse.radius) {
                     const force = (mouse.radius - dist) / mouse.radius;
-                    p.x -= (dx / dist) * force * 1.2;
-                    p.y -= (dy / dist) * force * 1.2;
+                    p.x -= (dx / dist) * force * 1.1;
+                    p.y -= (dy / dist) * force * 1.1;
                 }
             }
 
@@ -506,15 +533,15 @@ function initHeroInteractiveCanvas() {
             ctx.fillStyle = `${p.color}${p.alpha})`;
             ctx.fill();
 
-            // Connect nearby particles (Geometric wireframe / Delaunay vibe)
+            // Connect nearby particles (Geometric wireframe mesh)
             for (let j = i + 1; j < particles.length; j++) {
                 const p2 = particles[j];
                 const dx = p.x - p2.x;
                 const dy = p.y - p2.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
-                if (dist < 110) {
-                    const lineAlpha = (1 - dist / 110) * 0.22;
+                if (dist < 105) {
+                    const lineAlpha = (1 - dist / 105) * 0.20;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);

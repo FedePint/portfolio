@@ -26,8 +26,7 @@
     <!-- Top Scroll Reading Progress Indicator -->
     <div class="scroll-progress-bar" id="scroll-progress"></div>
 
-    <!-- Background Ambient Aura -->
-    <div class="ambient-mesh-glow" id="ambient-glow" aria-hidden="true"></div>
+
 
     <!-- ========== NAVIGATION ========== -->
     <nav class="navbar" id="navbar">
@@ -62,24 +61,17 @@
         <div class="hero-content">
             <div class="hero-status-pill">
                 <span class="status-pulse-dot"></span>
-                <span class="status-text">📍 Turin, Italy • Master's Student @ Politecnico di Torino</span>
+                <span class="status-text">Turin, Italy &bull; Master's Student @ Politecnico di Torino</span>
             </div>
 
-            <p class="hero-greeting">
-                <span class="greeting-line"></span>
-                Hello, I'm
-            </p>
             <h1 class="hero-name" id="hero-name">
                 Federico Pintabona
             </h1>
-            <p class="hero-title">
-                <span class="title-accent">Computer Engineering Student</span>
-                <span class="title-separator">|</span>
-                <span class="title-typed" id="title-typed"></span>
-                <span class="cursor-blink">|</span>
+            <p class="hero-headline">
+                High-Performance Computing, GPU Acceleration &amp; 3D Real-Time Graphics
             </p>
             <p class="hero-subtitle">
-                Bridging High-Performance Computing (C++, CUDA, low-level architectures) with real-time 3D Visual Computing (OpenGL, GLSL, Unreal Engine 5, Blender).
+                Master's student at Politecnico di Torino bridging low-level parallel hardware architectures (C++, CUDA, ARM) with real-time visual computing engines (OpenGL, GLSL, Unreal Engine 5, Blender).
             </p>
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">
@@ -137,7 +129,7 @@
     <section class="section about" id="about">
         <div class="container">
             <h2 class="section-title" data-animate="fade-up">
-                <span class="section-number">01.</span> About Me
+                About Me
             </h2>
             <div class="about-grid">
                 <div class="about-text" data-animate="fade-up" data-delay="100">
@@ -192,7 +184,7 @@
     <section class="section education" id="education">
         <div class="container">
             <h2 class="section-title" data-animate="fade-up">
-                <span class="section-number">02.</span> Academic Journey
+                Academic Journey
             </h2>
             <p class="section-subtitle" data-animate="fade-up" data-delay="100">
                 Dual academic foundation at Politecnico di Torino bridging low-level computer engineering and high-performance computing with digital media and 3D visual computing.
@@ -264,7 +256,7 @@
     <section class="section skills" id="skills">
         <div class="container">
             <h2 class="section-title" data-animate="fade-up">
-                <span class="section-number">03.</span> Skills &amp; Expertise
+                Skills &amp; Expertise
             </h2>
             <p class="section-subtitle" data-animate="fade-up" data-delay="100">
                 Synergistic engineering and artistic capabilities: from low-level GPU pipelines and parallel computing to 3D modeling and automated software quality assurance.
@@ -279,8 +271,9 @@
                     </div>
                     <h3 class="skill-name">3D Modeling & Assets</h3>
                     <p class="skill-desc">Polygonal and hard-surface 3D modeling, modular architectural environments, UV unwrapping, PBR lookdev texturing, and photorealistic Cycles rendering.</p>
-                    <div class="skill-meter">
-                        <div class="meter-bar"><span class="meter-fill meter-fill--blender" style="width: 95%;"></span></div>
+                    <div class="skill-focus-line">
+                        <span class="focus-label">Focus</span>
+                        <span>Hard-Surface Modeling &bull; Cycles Path Tracing</span>
                     </div>
                     <div class="skill-tags">
                         <span class="tag">Blender</span>
@@ -299,8 +292,9 @@
                     </div>
                     <h3 class="skill-name">Unreal Engine 5</h3>
                     <p class="skill-desc">Cinematic real-time environments, Lumen dynamic global illumination, Nanite virtualized geometry, Blueprints, Sequencer, and MetaHuman digital human framework.</p>
-                    <div class="skill-meter">
-                        <div class="meter-bar"><span class="meter-fill meter-fill--unreal" style="width: 92%;"></span></div>
+                    <div class="skill-focus-line">
+                        <span class="focus-label">Focus</span>
+                        <span>Lumen GI &bull; Nanite Meshes &bull; MetaHuman Mocap</span>
                     </div>
                     <div class="skill-tags">
                         <span class="tag">UE5</span>
@@ -320,8 +314,9 @@
                     </div>
                     <h3 class="skill-name">Computer Graphics & Shaders</h3>
                     <p class="skill-desc">Graphics pipeline programming with C++ and modern OpenGL 3.3, custom GLSL/HLSL shaders, Phong & PBR lighting models, mouse-to-world raycasting, and 3D spatial audio.</p>
-                    <div class="skill-meter">
-                        <div class="meter-bar"><span class="meter-fill meter-fill--opengl" style="width: 90%;"></span></div>
+                    <div class="skill-focus-line">
+                        <span class="focus-label">Focus</span>
+                        <span>Custom GLSL &bull; PBR Pipeline &bull; Raycasting</span>
                     </div>
                     <div class="skill-tags">
                         <span class="tag">OpenGL 3.3</span>
@@ -341,8 +336,9 @@
                     </div>
                     <h3 class="skill-name">Parallel Programming & HPC</h3>
                     <p class="skill-desc">High-performance GPU computing with NVIDIA CUDA, memory coalescing, shared memory optimization, multi-core architectures, and scalable GNN inference engines.</p>
-                    <div class="skill-meter">
-                        <div class="meter-bar"><span class="meter-fill meter-fill--cuda" style="width: 88%;"></span></div>
+                    <div class="skill-focus-line">
+                        <span class="focus-label">Focus</span>
+                        <span>Thread Coalescing &bull; Shared Memory &bull; OpenMP</span>
                     </div>
                     <div class="skill-tags">
                         <span class="tag">NVIDIA CUDA</span>
@@ -362,8 +358,9 @@
                     </div>
                     <h3 class="skill-name">Computer Architecture &amp; ARM</h3>
                     <p class="skill-desc">Hardware-level pipeline optimization, instruction scheduling for Instruction-Level Parallelism (ILP), mitigation of data/control hazards, and bare-metal C on ARM Cortex-M3.</p>
-                    <div class="skill-meter">
-                        <div class="meter-bar"><span class="meter-fill meter-fill--embedded" style="width: 86%;"></span></div>
+                    <div class="skill-focus-line">
+                        <span class="focus-label">Focus</span>
+                        <span>Bare-Metal C &bull; LPC1768 &bull; ILP Hazard Mitigation</span>
                     </div>
                     <div class="skill-tags">
                         <span class="tag">ARM Cortex-M3</span>
@@ -383,8 +380,9 @@
                     </div>
                     <h3 class="skill-name">Software Engineering &amp; QA</h3>
                     <p class="skill-desc">Rigorous software quality assurance: white-box unit test suites with pytest for backend logic verification, automated end-to-end browser UI testing with Selenium, and Git/GitLab workflows.</p>
-                    <div class="skill-meter">
-                        <div class="meter-bar"><span class="meter-fill meter-fill--qa" style="width: 88%;"></span></div>
+                    <div class="skill-focus-line">
+                        <span class="focus-label">Focus</span>
+                        <span>pytest Suites &bull; Selenium E2E &bull; GitLab CI</span>
                     </div>
                     <div class="skill-tags">
                         <span class="tag">Python</span>
@@ -403,7 +401,7 @@
     <section class="section projects" id="projects">
         <div class="container">
             <h2 class="section-title" data-animate="fade-up">
-                <span class="section-number">04.</span> Featured Projects
+                Featured Projects
             </h2>
             <p class="section-subtitle" data-animate="fade-up" data-delay="100">
                 Flagship 3D environments, real-time visual computing, and look development across Blender and Unreal Engine 5.
@@ -883,7 +881,7 @@
     <section class="section repositories" id="repositories">
         <div class="container">
             <h2 class="section-title" data-animate="fade-up">
-                <span class="section-number">05.</span> GitHub Repositories
+                GitHub Repositories
             </h2>
             <p class="section-subtitle" data-animate="fade-up" data-delay="100">
                 Low-level GPU acceleration kernels, parallel algorithms, graphics engines, and bare-metal embedded C implementations.
@@ -945,7 +943,7 @@
     <section class="section contact" id="contact">
         <div class="container">
             <h2 class="section-title" data-animate="fade-up">
-                <span class="section-number">06.</span> Get in Touch
+                Get in Touch
             </h2>
             <div class="contact-content">
                 <p class="contact-text" data-animate="fade-up" data-delay="100">
@@ -1005,7 +1003,7 @@
                     <span class="footer-sep">•</span>
                     Turin, Italy
                 </p>
-                <p class="footer-copy">&copy; 2026 Federico Pintabona — Built with precision &amp; <span class="footer-heart">♥</span></p>
+                <p class="footer-copy">&copy; 2026 Federico Pintabona. All rights reserved. &bull; Politecnico di Torino</p>
             </div>
         </div>
     </footer>
