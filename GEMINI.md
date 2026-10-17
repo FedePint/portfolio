@@ -58,10 +58,10 @@ Sono un ingegnere informatico specializzato in computer grafica , porgrammazione
 ### Sezioni previste
 
 1. **Hero** — Nome (Federico Pintabona), status badge (Turin, Italy • Master's Student @ PoliTo), CTA (Projects, Download CV, Contact), telemetria tecnologica live
-2. **About** — Chi sono, doppia laurea PoliTo, metriche salienti (16 render Cycles, PoliTo Dual Degree)
+2. **About** — Chi sono, doppia laurea PoliTo (B.Sc. & M.Sc.)
 3. **Education** — Percorso accademico (M.Sc. Computer Engineering & B.Sc. Cinema and Media Engineering @ Politecnico di Torino)
-4. **Skills** — Competenze tecniche suddivise in 6 schede con fluency meters (HPC & CUDA, OpenGL & Shaders, UE5 & Real-time, Blender LookDev, Low-Level & ARM, QA & Testing)
-5. **Projects** — Featured Projects visivi 3D & Real-time (Blender Saloon con galleria LookDev 16 render interattiva integrata e filmstrip modale, UE5 Japanese Sanctuary Cinematic Environment, MetaHuman Showcase)
+4. **Skills** — Competenze tecniche suddivise in 6 schede con focus lines architetturali (HPC & CUDA, OpenGL & Shaders, UE5 & Real-time, Blender LookDev, Low-Level & ARM, QA & Testing)
+5. **Projects** — Featured Projects visivi 3D & Real-time (Blender Saloon con galleria LookDev interattiva integrata e filmstrip modale, UE5 Japanese Sanctuary Cinematic Environment, MetaHuman Showcase)
 6. **Repositories** — Sezione GitHub dedicata con telemetria live API (parallel-gnn-inference, Droid-attack, Tetris-LandTiger), filtri per linguaggio e topic tags
 7. **Contact** — Canali di contatto (Email federicopintabona12@gmail.com, GitHub, LinkedIn disattivato, Location Torino) e box di download diretto del CV (PDF)
 8. **Footer** — Credits, copyright Federico Pintabona, navigazione rapida
@@ -90,7 +90,7 @@ portfolio/
  
 | # | Piattaforma | Tipo | Descrizione | Link / Rif |
 |---|-------------|------|-------------|------------|
-| 1 | Blender | 3D Environment (16 render) | La Bastille Saloon — Modellazione, texturing e rendering Cycles | media/saloon/ |
+| 1 | Blender | 3D Environment | La Bastille Saloon — Modellazione, texturing e rendering Cycles | media/saloon/ |
 | 2 | Unreal Engine | Video & 4 Renders | Cinematic Environment Showcase (UE5, Lumen, Nanite) | media/envirorment/ & [Video](https://youtu.be/W_AC5caENeg) |
 | 3 | Unreal Engine | Digital Double (10 Shots) & Video | MetaHuman 1 — Main Actor (Federico) Photogrammetry & Facial Mocap Pipeline | media/metahuman/ & [Video](https://youtu.be/jd8oNUgPNFU) |
 | 4 | OpenGL / C++ | GitHub Repo | Droid-attack (3D Shooter, GLSL Shaders, Raycasting) | [GitHub: Droid-attack](https://github.com/FedePint/Droid-attack) |
