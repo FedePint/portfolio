@@ -198,6 +198,11 @@ portfolio/
       - **Zero-Friction "Copy Email" + Micro-Toast**: Implementato il pulsante con copia in 1 clic negli appunti di `federicopintabona12@gmail.com`, feedback immediato `Copied! ✓` per 2.2s e micro-toast fluttuante hardware-accelerato con checkmark verde (Hero CTA + Contact Card).
       - **Bento Grid Skills Matrix (12 Colonne)**: Riorganizzate le 6 competenze tecniche in una griglia modulare bento (CUDA span 7 + UE5 span 5; OpenGL span 4 + Blender span 4 + ARM span 4; QA & Testing span 12) con focus lines e zero barre percentuali.
       - **Allineamento Case Studies con le Slide `TA-G08`**: Rafforzata la narrazione tecnica STAR (metriche hook, vincoli, dietro le quinte fotogrammetria 160 foto, sculpt Blender con Clay Strips/Smooth/Flatten, LiveLink TrueDepth mocap in 4 fasi emotive, telemetria Lumen/Nanite a 44.4 FPS).
+  21. **Sincronizzazione Dinamica Avatar GitHub & Aggiornamento Asset Locale (2026-10-18)**:
+      - **Download Nuova Foto Profilo**: Scaricata la nuova immagine del profilo GitHub di Federico Pintabona da `https://avatars.githubusercontent.com/u/241323046?v=4` e sovrascritta la copia statica locale in `assets/images/profile.jpg`.
+      - **Cache-Busting Immediato**: Aggiunto parametro di versioning `?v=20261018` al tag `<img>` in `index.html` per evitare che la cache locale del browser mostri il vecchio render MetaHuman.
+      - **Sincronizzazione Live Client-Side**: Integrato in `renderGitHubContent` in `js/main.js` l'aggiornamento automatico dell'attributo `src` di `.profile-avatar-img` con `user.avatar_url`, garantendo che qualunque futuro cambio di immagine su GitHub venga recepito in tempo reale dal sito.
+      - **Server Locale Attivo**: Avviato il server di sviluppo su `http://localhost:8000` e aperta la pagina nel browser predefinito.
 
 ---
 

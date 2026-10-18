@@ -1260,6 +1260,12 @@ function renderGitHubContent(user, repos) {
     if (statForksEl) statForksEl.textContent = totalForks;
     if (statFollowersEl) statFollowersEl.textContent = user.followers || 0;
     
+    // Dynamically update profile avatar from GitHub if present
+    const avatarImg = document.querySelector('.profile-avatar-img');
+    if (avatarImg && user && user.avatar_url) {
+        avatarImg.src = user.avatar_url;
+    }
+    
     if (reposEl) {
         reposEl.innerHTML = '';
 
