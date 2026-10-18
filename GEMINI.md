@@ -57,7 +57,7 @@ Sono un ingegnere informatico specializzato in computer grafica , porgrammazione
 
 ### Sezioni previste
 
-1. **Hero** — Nome (Federico Pintabona), status badge (Turin, Italy • Master's Student @ PoliTo), CTA (Projects, Download CV, Contact), telemetria tecnologica live
+1. **Hero** — Nome (Federico Pintabona), headline e value proposition tecnica ad alto impatto, CTA (Copy Email in 1 clic, Projects, Download CV), telemetria tecnologica live
 2. **About** — Chi sono, doppia laurea PoliTo (B.Sc. & M.Sc.)
 3. **Education** — Percorso accademico (M.Sc. Computer Engineering & B.Sc. Cinema and Media Engineering @ Politecnico di Torino)
 4. **Skills** — Competenze tecniche suddivise in 6 schede con focus lines architetturali (HPC & CUDA, OpenGL & Shaders, UE5 & Real-time, Blender LookDev, Low-Level & ARM, QA & Testing)
