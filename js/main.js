@@ -339,6 +339,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
     initRepoSyncButton();
     initZeroFrictionEmail();
+    initMobileBottomDock();
+    initSkillsMobileFilter();
+    initWorkflowStageSteppers();
     
     if (GITHUB_USERNAME) {
         fetchGitHubData(GITHUB_USERNAME);
@@ -1393,7 +1396,8 @@ function initZeroFrictionEmail() {
     const EMAIL = 'federicopintabona12@gmail.com';
     const copyBtns = [
         document.getElementById('hero-copy-email'),
-        document.getElementById('contact-email-copy')
+        document.getElementById('contact-email-copy'),
+        document.getElementById('nav-mobile-copy')
     ].filter(Boolean);
 
     const toastEl = document.getElementById('toast');
@@ -1466,3 +1470,149 @@ function initZeroFrictionEmail() {
         });
     });
 }
+
+/* ============================================
+   MOBILE BOTTOM DOCK NAVIGATION (Ergonomic Thumb-Zone)
+   ============================================ */
+function initMobileBottomDock() {
+    const dock = document.getElementById('mobile-bottom-dock');
+    if (!dock) return;
+
+    const dockItems = dock.querySelectorAll('.mobile-dock-item');
+    if (!dockItems.length) return;
+
+    const sections = ['hero', 'about', 'skills', 'projects', 'repositories', 'contact']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+    function updateActiveDock() {
+        const scrollPosition = window.scrollY + window.innerHeight * 0.35;
+
+        let currentSectionId = sections[0]?.id || 'hero';
+        for (let i = 0; i < sections.length; i++) {
+            const sec = sections[i];
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+            if (scrollPosition >= top && scrollPosition < top + height) {
+                currentSectionId = sec.id;
+                break;
+            } else if (scrollPosition >= top) {
+                currentSectionId = sec.id;
+            }
+        }
+
+        dockItems.forEach(item => {
+            const targetSection = item.getAttribute('data-section');
+            if (targetSection === currentSectionId) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateActiveDock();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Initial check
+    updateActiveDock();
+}
+
+/* ============================================
+   MOBILE SKILLS DOMAIN SELECTOR
+   ============================================ */
+function initSkillsMobileFilter() {
+    const filterContainer = document.getElementById('skills-mobile-filter');
+    if (!filterContainer) return;
+
+    const chips = filterContainer.querySelectorAll('.skill-filter-chip');
+    const skillCards = document.querySelectorAll('.skills-bento-grid .skill-card');
+    if (!chips.length || !skillCards.length) return;
+
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            const filter = chip.getAttribute('data-skill-filter');
+
+            chips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+
+            skillCards.forEach(card => {
+                const domain = card.getAttribute('data-domain');
+                if (filter === 'all' || domain === filter) {
+                    card.classList.remove('skill-card--filtered-out');
+                } else {
+                    card.classList.add('skill-card--filtered-out');
+                }
+            });
+        });
+    });
+}
+
+/* ============================================
+   MOBILE WORKFLOW STAGE STEPPERS & HORIZONTAL SYNC
+   ============================================ */
+function initWorkflowStageSteppers() {
+    function setupStepper(stepperId, gridSelector) {
+        const stepper = document.getElementById(stepperId);
+        const grid = document.querySelector(gridSelector);
+        if (!stepper || !grid) return;
+
+        const pills = stepper.querySelectorAll('.stage-step-pill');
+        const cards = grid.querySelectorAll('.workflow-stage-card');
+        if (!pills.length || !cards.length) return;
+
+        // Pill tap scrolls card into view smoothly
+        pills.forEach((pill, idx) => {
+            pill.addEventListener('click', () => {
+                const targetCard = cards[idx];
+                if (targetCard) {
+                    targetCard.scrollIntoView({
+                        behavior: 'smooth',
+                        inline: 'center',
+                        block: 'nearest'
+                    });
+                }
+            });
+        });
+
+        // Horizontal scroll inside grid updates active pill
+        let scrollTimeout = null;
+        grid.addEventListener('scroll', () => {
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const gridCenter = grid.scrollLeft + grid.offsetWidth / 2;
+                let closestIdx = 0;
+                let minDistance = Infinity;
+
+                cards.forEach((card, idx) => {
+                    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                    const distance = Math.abs(cardCenter - gridCenter);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestIdx = idx;
+                    }
+                });
+
+                pills.forEach((p, i) => {
+                    if (i === closestIdx) {
+                        p.classList.add('active');
+                    } else {
+                        p.classList.remove('active');
+                    }
+                });
+            }, 50);
+        }, { passive: true });
+    }
+
+    setupStepper('metahuman-stage-stepper', '.metahuman-workflow-grid');
+    setupStepper('environment-stage-stepper', '.environment-workflow-grid');
+}
+

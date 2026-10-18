@@ -210,6 +210,13 @@ portfolio/
       - **Hero & Telemetry Micro-Grid**: Typography scalabile con clamp protetti da wrap anomali, pulsanti CTA full-width verticali e telemetria live riorganizzata in micro-griglia 2x3 ordinata e leggibile.
       - **Featured Projects Mobile-Ready**: Barra filtri orizzontale con touch-scrolling nativo inerziale, card flagship con overview a colonna singola pulita, micro-griglie compatte per statistiche di produzione (160 Photos, Lumen, Nanite, 44+ FPS) e layout 2x2 conservato per il climax emotivo MetaHuman (neutral, glances, strain, climax) per evitare scrolling chilometrici.
       - **3D LookDev Lightbox Touch-Optimized**: Modal 100vw x 100vh a schermo intero, pulsanti freccia flottanti direttamente sull'immagine per navigazione a 1 tocco, swipe gestuale touch (sinistra/destra) e rimozione suggerimenti tastiera su mobile.
+  23. **Native Mobile Architecture & App-Grade Ergonomics (2026-10-18)**:
+      - **Ergonomic Thumb-Zone Navigation Dock (`.mobile-bottom-dock`)**: Dock inferiore fluttuante ancorato all'area ergonomica del pollice con `backdrop-filter: blur(24px)`, supporto `env(safe-area-inset-bottom)`, 6 icone SVG e tracking live della sezione attiva durante lo scroll.
+      - **Quick-Action Email in Top Navbar**: Pulsante pillola compatto `Email` integrato nella navbar mobile fluttuante accanto al logo e al toggle hamburger, con copia a 1 tocco negli appunti, stato "Copied! ✓" e micro-toast animato.
+      - **Connected Academic Journey Timeline**: Riorganizzata la sezione Education su mobile trasformando le card in una linea temporale verticale continua, con asse al neon `var(--accent-primary)` e nodi circolari luminosi che collegano Master's e Bachelor's degree.
+      - **Segmented Domain Selector for Skills**: Aggiunta barra di chip filtranti a scorrimento orizzontale (`All`, `HPC & CUDA`, `OpenGL / Shaders`, `UE5 & 3D`, `ARM & QA`) con isolamento istantaneo delle card per dominio per evitare scroll prolungati.
+      - **Production Horizontal Snap Carousels con Stage Steppers**: Convertiti i breakdown di produzione di MetaHuman e Cinematic Environment da colonne verticali infinite in caroselli orizzontali nativi con scorrimento inerziale (`scroll-snap-type: x mandatory`) e pulsanti stepper di progressione (`01`, `02`, `03`), sincronizzati bidirezionalmente (tap su pillola scivola alla card, swipe sulla griglia aggiorna la pillola attiva).
+      - **Safe Spacing & Elevation**: Elevati il pulsante Back-to-Top circolare e il micro-toast fluttuante con offset dinamico `calc(65px/75px + env(safe-area-inset-bottom))` per garantire zero sovrapposizioni visive con la dock bar.
 
 ---
 
