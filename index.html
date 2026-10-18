@@ -18,7 +18,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -74,15 +74,18 @@
                 Master's student at Politecnico di Torino bridging low-level parallel hardware architectures (C++, CUDA, ARM) with real-time visual computing engines (OpenGL, GLSL, Unreal Engine 5, Blender).
             </p>
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
+                <button type="button" class="btn btn-primary" id="hero-copy-email" data-email="federicopintabona12@gmail.com" title="Copy email address in 1 click">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>Copy Email</span>
+                </button>
+                <a href="#projects" class="btn btn-outline">
                     <span>View Projects</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
                 <a href="assets/docs/CV_Federico_Pintabona.pdf" download="CV_Federico_Pintabona.pdf" class="btn btn-outline">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                     <span>Download CV</span>
                 </a>
-                <a href="#contact" class="btn btn-outline">Get in Touch</a>
             </div>
 
             <!-- Real-time Tech Telemetry Strip -->
@@ -252,29 +255,32 @@
             <p class="section-subtitle" data-animate="fade-up" data-delay="100">
                 Synergistic engineering and artistic capabilities: from low-level GPU pipelines and parallel computing to 3D modeling and automated software quality assurance.
             </p>
-            <div class="skills-grid">
-                <div class="skill-card skill-card--blender" data-animate="fade-up" data-delay="0">
+            <div class="skills-grid skills-bento-grid">
+                <!-- Bento Block 1: CUDA & Parallel Computing (Span 7) -->
+                <div class="skill-card skill-card--cuda bento-span-7" data-animate="fade-up" data-delay="0">
                     <div class="skill-card-header">
-                        <div class="skill-icon skill-icon--blender">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        <div class="skill-icon skill-icon--cuda">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
                         </div>
-                        <span class="skill-badge skill-badge--blender">3D LookDev</span>
+                        <span class="skill-badge skill-badge--cuda">HPC Acceleration</span>
                     </div>
-                    <h3 class="skill-name">3D Modeling & Assets</h3>
-                    <p class="skill-desc">Polygonal and hard-surface 3D modeling, modular architectural environments, UV unwrapping, PBR lookdev texturing, and photorealistic Cycles rendering.</p>
+                    <h3 class="skill-name">Parallel Programming &amp; HPC</h3>
+                    <p class="skill-desc">High-performance GPU computing with NVIDIA CUDA, thread coalescing, shared memory hierarchy optimization, multi-core scaling via OpenMP, and scalable GNN inference acceleration.</p>
                     <div class="skill-focus-line">
                         <span class="focus-label">Focus</span>
-                        <span>Hard-Surface Modeling &bull; Cycles Path Tracing</span>
+                        <span>Thread Coalescing &bull; Shared Memory &bull; OpenMP</span>
                     </div>
                     <div class="skill-tags">
-                        <span class="tag">Blender</span>
-                        <span class="tag">Cycles Engine</span>
-                        <span class="tag">PBR Texturing</span>
-                        <span class="tag">Hard Surface</span>
+                        <span class="tag">NVIDIA CUDA</span>
+                        <span class="tag">C++ Multi-Core</span>
+                        <span class="tag">OpenMP</span>
+                        <span class="tag">GPU Kernels</span>
+                        <span class="tag">Bandwidth Opt</span>
                     </div>
                 </div>
 
-                <div class="skill-card skill-card--unreal" data-animate="fade-up" data-delay="100">
+                <!-- Bento Block 2: Unreal Engine 5 (Span 5) -->
+                <div class="skill-card skill-card--unreal bento-span-5" data-animate="fade-up" data-delay="100">
                     <div class="skill-card-header">
                         <div class="skill-icon skill-icon--unreal">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
@@ -296,15 +302,16 @@
                     </div>
                 </div>
 
-                <div class="skill-card skill-card--opengl" data-animate="fade-up" data-delay="200">
+                <!-- Bento Block 3: OpenGL & GLSL (Span 4) -->
+                <div class="skill-card skill-card--opengl bento-span-4" data-animate="fade-up" data-delay="150">
                     <div class="skill-card-header">
                         <div class="skill-icon skill-icon--opengl">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                         </div>
                         <span class="skill-badge skill-badge--opengl">Graphics API</span>
                     </div>
-                    <h3 class="skill-name">Computer Graphics & Shaders</h3>
-                    <p class="skill-desc">Graphics pipeline programming with C++ and modern OpenGL 3.3, custom GLSL/HLSL shaders, Phong & PBR lighting models, mouse-to-world raycasting, and 3D spatial audio.</p>
+                    <h3 class="skill-name">Computer Graphics &amp; Shaders</h3>
+                    <p class="skill-desc">Graphics pipeline programming with C++ and modern OpenGL 3.3, custom GLSL/HLSL shaders, Phong &amp; PBR lighting models, mouse-to-world raycasting, and 3D spatial audio.</p>
                     <div class="skill-focus-line">
                         <span class="focus-label">Focus</span>
                         <span>Custom GLSL &bull; PBR Pipeline &bull; Raycasting</span>
@@ -318,29 +325,30 @@
                     </div>
                 </div>
 
-                <div class="skill-card skill-card--cuda" data-animate="fade-up" data-delay="300">
+                <!-- Bento Block 4: Blender 3D LookDev (Span 4) -->
+                <div class="skill-card skill-card--blender bento-span-4" data-animate="fade-up" data-delay="200">
                     <div class="skill-card-header">
-                        <div class="skill-icon skill-icon--cuda">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                        <div class="skill-icon skill-icon--blender">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                         </div>
-                        <span class="skill-badge skill-badge--cuda">HPC Acceleration</span>
+                        <span class="skill-badge skill-badge--blender">3D LookDev</span>
                     </div>
-                    <h3 class="skill-name">Parallel Programming & HPC</h3>
-                    <p class="skill-desc">High-performance GPU computing with NVIDIA CUDA, memory coalescing, shared memory optimization, multi-core architectures, and scalable GNN inference engines.</p>
+                    <h3 class="skill-name">3D Modeling &amp; Assets</h3>
+                    <p class="skill-desc">Polygonal and hard-surface 3D modeling, modular architectural environments, UV unwrapping, PBR lookdev texturing, and photorealistic Cycles rendering.</p>
                     <div class="skill-focus-line">
                         <span class="focus-label">Focus</span>
-                        <span>Thread Coalescing &bull; Shared Memory &bull; OpenMP</span>
+                        <span>Hard-Surface Modeling &bull; Cycles Path Tracing</span>
                     </div>
                     <div class="skill-tags">
-                        <span class="tag">NVIDIA CUDA</span>
-                        <span class="tag">C++ Multi-Core</span>
-                        <span class="tag">OpenMP</span>
-                        <span class="tag">GPU Kernels</span>
-                        <span class="tag">Bandwidth Opt</span>
+                        <span class="tag">Blender</span>
+                        <span class="tag">Cycles Engine</span>
+                        <span class="tag">PBR Texturing</span>
+                        <span class="tag">Hard Surface</span>
                     </div>
                 </div>
 
-                <div class="skill-card skill-card--embedded" data-animate="fade-up" data-delay="400">
+                <!-- Bento Block 5: Computer Architecture & ARM (Span 4) -->
+                <div class="skill-card skill-card--embedded bento-span-4" data-animate="fade-up" data-delay="250">
                     <div class="skill-card-header">
                         <div class="skill-icon skill-icon--embedded">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
@@ -362,7 +370,8 @@
                     </div>
                 </div>
 
-                <div class="skill-card skill-card--qa" data-animate="fade-up" data-delay="500">
+                <!-- Bento Block 6: Software Engineering & QA (Span 12) -->
+                <div class="skill-card skill-card--qa bento-span-12" data-animate="fade-up" data-delay="300">
                     <div class="skill-card-header">
                         <div class="skill-icon skill-icon--qa">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
@@ -942,11 +951,11 @@
                     I'm actively open to opportunities in High-Performance Computing, GPU acceleration, Computer Graphics, Technical Art, and Software Engineering.
                 </p>
                 <div class="contact-methods" data-animate="fade-up" data-delay="200">
-                    <a href="mailto:federicopintabona12@gmail.com" class="contact-card" id="contact-email">
+                    <button type="button" class="contact-card contact-card--action" id="contact-email-copy" data-email="federicopintabona12@gmail.com" title="Click to copy email address">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">federicopintabona12@gmail.com</span>
-                    </a>
+                        <span class="contact-label">Email (1-Click Copy)</span>
+                        <span class="contact-value" id="contact-email-value">federicopintabona12@gmail.com</span>
+                    </button>
                     <a href="https://github.com/FedePint" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                         <span class="contact-label">GitHub</span>
@@ -1062,6 +1071,9 @@
         </svg>
         <svg class="arrow-up-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
+
+    <!-- Floating Micro-Toast Notification (Blueprint Rule 4.4) -->
+    <div id="toast" class="toast-notification" aria-live="polite"></div>
 
     <script src="js/main.js"></script>
 </body>

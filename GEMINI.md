@@ -192,6 +192,12 @@ portfolio/
       - **About Me**: Rimosse le metriche di dettaglio GNN (1.5M nodi e 128 feature/nodo) focalizzando i badge salienti sui render 3D Cycles e sulla doppia laurea PoliTo; rimossa la sezione interessi personali ("Beyond Engineering").
       - **Featured Projects**: Rimossa la scheda Canva Slide Deck per mantenere la sezione Projects dedicata esclusivamente ai tre flagship 3D e real-time (Blender Saloon, MetaHuman 1, UE5 Japanese Sanctuary); ricalibrati i contatori filtri (All Works: 3, Unreal Engine: 2).
       - **Contatti**: Aggiunta la mail personale reale `federicopintabona12@gmail.com` (con `mailto:` attivo) e disattivato il link LinkedIn (reso non cliccabile con feedback visivo dedicato `contact-card--disabled`).
+  20. **Redesign Architetturale & Visivo da `portfolio_design_engineering_blueprint.md` (2026-10-18)**:
+      - **Palette Obsidian Tech**: Applicati i design tokens d'avanguardia (`#0A0A0C` canvas profondo, `#121216` bento elevation, `#E2FF32` Acid Lime high-contrast accent, `#F4F4F6` off-white anti-glare).
+      - **Floating Glass Pill Navbar**: Convertita la navigazione in una barra pillola fluttuante con `backdrop-filter: blur(16px)`, raggio `9999px`, bordo `1px solid var(--border-subtle)` e reattività mobile.
+      - **Zero-Friction "Copy Email" + Micro-Toast**: Implementato il pulsante con copia in 1 clic negli appunti di `federicopintabona12@gmail.com`, feedback immediato `Copied! ✓` per 2.2s e micro-toast fluttuante hardware-accelerato con checkmark verde (Hero CTA + Contact Card).
+      - **Bento Grid Skills Matrix (12 Colonne)**: Riorganizzate le 6 competenze tecniche in una griglia modulare bento (CUDA span 7 + UE5 span 5; OpenGL span 4 + Blender span 4 + ARM span 4; QA & Testing span 12) con focus lines e zero barre percentuali.
+      - **Allineamento Case Studies con le Slide `TA-G08`**: Rafforzata la narrazione tecnica STAR (metriche hook, vincoli, dietro le quinte fotogrammetria 160 foto, sculpt Blender con Clay Strips/Smooth/Flatten, LiveLink TrueDepth mocap in 4 fasi emotive, telemetria Lumen/Nanite a 44.4 FPS).
 
 ---
 

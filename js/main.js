@@ -338,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCardSpotlights();
     initBackToTop();
     initRepoSyncButton();
+    initZeroFrictionEmail();
     
     if (GITHUB_USERNAME) {
         fetchGitHubData(GITHUB_USERNAME);
@@ -1364,3 +1365,85 @@ window.addDevRepo = function(repo) {
     renderGitHubContent(GITHUB_FALLBACK_USER, currentRepos);
     console.log('✅ Added dynamic repo! Total repos now:', currentRepos.length);
 };
+
+/* ============================================
+   ZERO-FRICTION EMAIL COPY & MICRO-TOAST
+   Blueprint Rule 4.4
+   ============================================ */
+function initZeroFrictionEmail() {
+    const EMAIL = 'federicopintabona12@gmail.com';
+    const copyBtns = [
+        document.getElementById('hero-copy-email'),
+        document.getElementById('contact-email-copy')
+    ].filter(Boolean);
+
+    const toastEl = document.getElementById('toast');
+    let toastTimeout = null;
+
+    function showToast(message) {
+        if (!toastEl) return;
+        toastEl.innerHTML = `
+            <span class="toast-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </span>
+            <span>${message}</span>
+        `;
+        toastEl.classList.add('is-visible');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+            toastEl.classList.remove('is-visible');
+        }, 3200);
+    }
+
+    async function handleCopy(btn) {
+        let copied = false;
+        if (navigator.clipboard && window.isSecureContext) {
+            try {
+                await navigator.clipboard.writeText(EMAIL);
+                copied = true;
+            } catch (err) {
+                copied = false;
+            }
+        }
+        
+        if (!copied) {
+            try {
+                const textArea = document.createElement('textarea');
+                textArea.value = EMAIL;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-9999px';
+                textArea.style.top = '-9999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                copied = true;
+            } catch (e) {
+                console.warn('Fallback copy failed', e);
+            }
+        }
+
+        showToast('Email copied to clipboard! (federicopintabona12@gmail.com)');
+
+        if (btn) {
+            const spanText = btn.querySelector('span');
+            const originalText = spanText ? spanText.textContent : btn.textContent;
+            if (spanText) spanText.textContent = 'Copied! ✓';
+            btn.classList.add('btn--copied');
+            setTimeout(() => {
+                if (spanText) spanText.textContent = originalText;
+                btn.classList.remove('btn--copied');
+            }, 2200);
+        }
+    }
+
+    copyBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            handleCopy(btn);
+        });
+    });
+}
