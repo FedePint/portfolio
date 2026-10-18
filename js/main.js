@@ -398,6 +398,19 @@ function initNavigation() {
     
     links.forEach(link => link.addEventListener('click', closeNav));
     overlay.addEventListener('click', closeNav);
+
+    // Auto-close mobile menu on desktop resize or Escape key
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+            closeNav();
+        }
+    }, { passive: true });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeNav();
+        }
+    });
 }
 
 function updateActiveLink() {

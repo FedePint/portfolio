@@ -203,6 +203,13 @@ portfolio/
       - **Cache-Busting Immediato**: Aggiunto parametro di versioning `?v=20261018` al tag `<img>` in `index.html` per evitare che la cache locale del browser mostri il vecchio render MetaHuman.
       - **Sincronizzazione Live Client-Side**: Integrato in `renderGitHubContent` in `js/main.js` l'aggiornamento automatico dell'attributo `src` di `.profile-avatar-img` con `user.avatar_url`, garantendo che qualunque futuro cambio di immagine su GitHub venga recepito in tempo reale dal sito.
       - **Server Locale Attivo**: Avviato il server di sviluppo su `http://localhost:8000` e aperta la pagina nel browser predefinito.
+  22. **Mobile Responsive Design Elevation & Architecture Polish (2026-10-18)**:
+      - **Breakpoints Decrescenti Unificati**: Riorganizzata la cascata CSS in una gerarchia rigorosa (992px -> 768px -> 480px -> 360px), eliminando i conflitti di precedenza e le media queries isolate.
+      - **Floating Glass Pill Navbar su Mobile**: Sostituito il layout fisso asimmetrico con una pillola perfettamente adattata (`left: 0.75rem; right: 0.75rem; transform: none; width: auto`), menu a tendina drawer ancorato con glassmorphism satinato (`backdrop-filter: blur(24px)`), target tattili > 44px e chiusura automatica con overlay, tasto ESC o resize del viewport.
+      - **Risoluzione Overflow Orizzontale**: Convertiti tutti i `minmax(px, 1fr)` rigidi in fluidi `minmax(min(100%, ...), 1fr)` per Education, Skills, Repositories e Contact, garantendo zero barre di scorrimento orizzontale su schermi da 320px a 390px.
+      - **Hero & Telemetry Micro-Grid**: Typography scalabile con clamp protetti da wrap anomali, pulsanti CTA full-width verticali e telemetria live riorganizzata in micro-griglia 2x3 ordinata e leggibile.
+      - **Featured Projects Mobile-Ready**: Barra filtri orizzontale con touch-scrolling nativo inerziale, card flagship con overview a colonna singola pulita, micro-griglie compatte per statistiche di produzione (160 Photos, Lumen, Nanite, 44+ FPS) e layout 2x2 conservato per il climax emotivo MetaHuman (neutral, glances, strain, climax) per evitare scrolling chilometrici.
+      - **3D LookDev Lightbox Touch-Optimized**: Modal 100vw x 100vh a schermo intero, pulsanti freccia flottanti direttamente sull'immagine per navigazione a 1 tocco, swipe gestuale touch (sinistra/destra) e rimozione suggerimenti tastiera su mobile.
 
 ---
 
