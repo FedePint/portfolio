@@ -118,7 +118,7 @@ portfolio/
 | Responsive design           | ✅ Completato | 2026-10-15 |
 | Test e polish               | ✅ Completato | 2026-10-18 |
 | Repository Git locale       | ✅ Inizializzata (branch main) | 2026-10-18 |
-| Deploy su GitHub Pages      | 🔄 Pronto al push | 2026-10-18 |
+| Deploy su GitHub Pages      | ✅ Pushed su main (in attivazione Settings) | 2026-10-18 |
  
 ---
  
